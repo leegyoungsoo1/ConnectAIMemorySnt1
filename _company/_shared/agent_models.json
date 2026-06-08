@@ -7,5 +7,6 @@
   "yeongho": "gemma4:31b",
   "oksun": "gemma4:31b",
   "sonja": "gemma4:e2b",
-  "youngsuk": "gemma4:e2b"
+  "youngsuk": "gemma4:e2b",
+  "news_clip": "gemma4:31b"
 }

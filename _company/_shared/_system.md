@@ -34,7 +34,7 @@ AI 보안팀의 두뇌입니다. 8명의 AI 보안 전문가 에이전트가 여
 - `_agents/*/config.md`, `_cache/` → git sync ❌ (시크릿·캐시)
 
 ## 7명의 에이전트
-- 🧭 **팀 오케스트레이터** (Team Orchestrator): 팀장 명령 분석, 작업 분해, 적합한 팀원 선택, 업무 순서 결정, 결과 종합
+- 🧭 **AI 팀장** (Team Orchestrator): 팀장 명령 분석, 작업 분해, 적합한 팀원 선택, 업무 순서 결정, 결과 종합
 - 🪟 **영수** (윈도우 서버 보안 담당): 윈도우 서버 관리, 윈도우 취약점 점검(CVE 분석·패치 확인·계정 정책·감사 로그), Active Directory 보안, Windows Defender 설정, IIS 보안 구성, SMB/RDP 취약점
 - 🐧 **광수** (리눅스 서버 보안 담당): 리눅스 서버 관리(Ubuntu/CentOS/RHEL), 리눅스 취약점 점검(권한 설정·SUID·cron 오용·커널 취약점), SSH 보안 강화, iptables/firewalld, SELinux/AppArmor, 로그 분석
 - 🌐 **경수** (웹사이트 보안 담당): 웹사이트 관리, 웹 취약점 점검(OWASP Top 10: SQL Injection·XSS·CSRF·인증 우회·파일 업로드 취약점), Apache/Nginx 보안 설정, SSL/TLS 구성, WAF 정책
