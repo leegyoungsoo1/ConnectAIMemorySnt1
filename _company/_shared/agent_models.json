@@ -1,11 +1,11 @@
 {
-  "ceo": "gemma4:e2b",
+  "ceo": "gemma4:31b",
   "yeongsu": "gemma4:e2b",
   "gwangsu": "gemma4:e2b",
-  "gyeongsu": "gemma4:e2b",
-  "yeongcheol": "gemma4:e2b",
-  "yeongho": "gemma4:e2b",
-  "oksun": "gemma4:e2b",
+  "gyeongsu": "gemma4:31b",
+  "yeongcheol": "gemma4:31b",
+  "yeongho": "gemma4:31b",
+  "oksun": "gemma4:31b",
   "sonja": "gemma4:e2b",
   "youngsuk": "gemma4:e2b"
 }
