@@ -46,7 +46,7 @@ def main():
 
     cfg = {}
     if os.path.exists(CONFIG_FILE):
-        with open(CONFIG_FILE) as f: cfg = json.load(f)
+        with open(CONFIG_FILE, encoding='utf-8') as f: cfg = json.load(f)
 
     print(f"=== Linux 취약점 점검 | {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')} ===")
     checks = args.checks.lower()

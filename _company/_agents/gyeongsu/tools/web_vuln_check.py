@@ -78,7 +78,7 @@ def main():
 
     cfg = {}
     if os.path.exists(CONFIG_FILE):
-        with open(CONFIG_FILE) as f: cfg = json.load(f)
+        with open(CONFIG_FILE, encoding='utf-8') as f: cfg = json.load(f)
     url = args.url or cfg.get('target_url', '')
     if not url:
         print("오류: --url 또는 web_vuln_check.json의 target_url 설정 필요")
