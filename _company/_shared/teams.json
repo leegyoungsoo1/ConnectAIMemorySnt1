@@ -1,0 +1,23 @@
+{
+  "companyName": "AI보안팀",
+  "teams": [
+    {
+      "id": "security",
+      "name": "AI 보안팀",
+      "emoji": "🛡️",
+      "color": "#00FF41",
+      "agentIds": [
+        "ceo",
+        "yeongsu",
+        "gwangsu",
+        "gyeongsu",
+        "yeongcheol",
+        "yeongho",
+        "oksun",
+        "sonja",
+        "youngsuk"
+      ]
+    }
+  ],
+  "selected": "security"
+}
