@@ -24,7 +24,7 @@ AUTONOMY_LEVEL: 2
 
 ### 📰 news_fetch — IT 뉴스 RSS 클리핑
 
-국내외 IT RSS 피드에서 최신 뉴스를 수집하고 데일리 보고서 초안을 생성합니다.
+국내 IT RSS 피드에서 최신 뉴스를 수집하고 데일리 보고서 초안을 생성합니다.
 
 **실행:** `python news_fetch.py`
 **설정:** `news_fetch.json` (피드 목록, 수집 개수)

@@ -1,5 +1,5 @@
 # news_fetch.py — v1.0 — 데일리 IT 핫이슈 뉴스 클리핑
-# RSS 피드에서 국내외 IT 뉴스를 수집하여 보고서 형식으로 저장
+# RSS 피드에서 국내 IT 뉴스를 수집하여 보고서 형식으로 저장
 # API 키 불필요 — Python 표준 라이브러리만 사용
 # 사용: python news_fetch.py [--count 10] [--output report.md]
 import sys, os, json, datetime, argparse, html, re, ssl

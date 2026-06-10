@@ -1,4 +1,4 @@
-=== IT 뉴스 클리핑 | 2026년 06월 09일 ===
+=== IT 뉴스 클리핑 | 2026년 06월 10일 ===
 
   📡 ZDNet Korea 수집 중...
   ⚠️  ZDNet Korea 피드 실패: HTTP Error 404: Not Found
@@ -20,7 +20,7 @@
   📡 Hacker News (Top) 수집 중...
      → 15건
 
-📊 총 69건 수집 → 상위 10건 선정
+📊 총 70건 수집 → 상위 10건 선정
 ✅ 보고서 저장: d:\1.개발관련\Claude Code Test\connect-ai-main\지식폴더\_company\_agents\news_clip\tools\news_latest.md
 ✅ JSON 결과: d:\1.개발관련\Claude Code Test\connect-ai-main\지식폴더\_company\_agents\news_clip\tools\news_latest.json
 
