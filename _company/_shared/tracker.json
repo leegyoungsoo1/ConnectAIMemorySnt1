@@ -67,6 +67,57 @@
       "preAlarmsSent": [],
       "evidence": "완료: sessions/2026-06-08T08-01/_report.md\n- 영호: 관리자 페이지 무차별 대입, 노출 설정 파일(.env, .git) 분석, SMB Null Session 및 파일 업로드 취약점을 포함하여 실제 \n- 영철: 영호가 성공시킨 모의해킹 경로와 취약점을 취합하여, CVSS 기반 위험도 분류 및 구체적인 해결 방법을 포함한 표 형태의 최종 보안 보고서를 작\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 🔴 영호 _(모의해킹 담당)_\n> 📋 **지시**: 관리자 페이지 무차별 대입, 노출 설정 파일(.env, .git) 분석, SMB Null Session 및 파일 업로드 취약점을 포함하여 실제 침투 성공(RCE 등) 시까지 고도화된 공격 시나리오를 설계하고 실행하십시오.\n> 🔧 **도구 실행**: _",
       "completedAt": "2026-06-08T08:02:53.071Z"
+    },
+    {
+      "id": "20260610070423-0iz7",
+      "title": "**V-001**: 파라미터화 쿼리 적용 및 검증 완료 (우선순위: 최상)",
+      "description": "자동 등록 (영철 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "yeongcheol"
+      ],
+      "createdAt": "2026-06-10T07:04:23.061Z",
+      "status": "done",
+      "sessionDir": "2026-06-10T07-03",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-10T07-03/_report.md\n- 영철: ASP.NET 환경 재점검 결과 데이터를 취합하여 CVSS 기반으로 분류하고, 기존 보고서를 최신 상태로 업데이트하여 팀장님께 보고하십시오.\n\nCEO 종합 요점: 📋 영철: 작업 시작합니다.\n\n팀장님, ASP.NET 환경으로 기술 스택을 확정한 후 재점검된 데이터를 기반으로 취약점 취합 및 보고서 업데이트를 진행하겠습니다. [근거: CEO 지시사항]\n\n기존의 PHP/WordPress 기반 오탐(FP) 항목들을 완전히 제거하고, 식별된 실제 취약점 3건에 대해 CVSS v3.1 기준 심각도를 산정하여 정리하였습니다.",
+      "completedAt": "2026-06-10T07:04:23.133Z"
+    },
+    {
+      "id": "20260610070423-x9qz",
+      "title": "**V-003**: SSH 루트 로그인 금지 설정 적용 (우선순위: 상)",
+      "description": "자동 등록 (영철 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "yeongcheol"
+      ],
+      "createdAt": "2026-06-10T07:04:23.092Z",
+      "status": "done",
+      "sessionDir": "2026-06-10T07-03",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-10T07-03/_report.md\n- 영철: ASP.NET 환경 재점검 결과 데이터를 취합하여 CVSS 기반으로 분류하고, 기존 보고서를 최신 상태로 업데이트하여 팀장님께 보고하십시오.\n\nCEO 종합 요점: 📋 영철: 작업 시작합니다.\n\n팀장님, ASP.NET 환경으로 기술 스택을 확정한 후 재점검된 데이터를 기반으로 취약점 취합 및 보고서 업데이트를 진행하겠습니다. [근거: CEO 지시사항]\n\n기존의 PHP/WordPress 기반 오탐(FP) 항목들을 완전히 제거하고, 식별된 실제 취약점 3건에 대해 CVSS v3.1 기준 심각도를 산정하여 정리하였습니다.",
+      "completedAt": "2026-06-10T07:04:23.150Z"
+    },
+    {
+      "id": "20260610070423-16qb",
+      "title": "**V-002**: IIS 설정 파일 접근 권한 제한 (우선순위: 중)",
+      "description": "자동 등록 (영철 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "yeongcheol"
+      ],
+      "createdAt": "2026-06-10T07:04:23.111Z",
+      "status": "done",
+      "sessionDir": "2026-06-10T07-03",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-10T07-03/_report.md\n- 영철: ASP.NET 환경 재점검 결과 데이터를 취합하여 CVSS 기반으로 분류하고, 기존 보고서를 최신 상태로 업데이트하여 팀장님께 보고하십시오.\n\nCEO 종합 요점: 📋 영철: 작업 시작합니다.\n\n팀장님, ASP.NET 환경으로 기술 스택을 확정한 후 재점검된 데이터를 기반으로 취약점 취합 및 보고서 업데이트를 진행하겠습니다. [근거: CEO 지시사항]\n\n기존의 PHP/WordPress 기반 오탐(FP) 항목들을 완전히 제거하고, 식별된 실제 취약점 3건에 대해 CVSS v3.1 기준 심각도를 산정하여 정리하였습니다.",
+      "completedAt": "2026-06-10T07:04:23.169Z"
     }
   ]
 }
