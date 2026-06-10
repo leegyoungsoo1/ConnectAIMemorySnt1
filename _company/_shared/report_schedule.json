@@ -29,7 +29,8 @@
         5
       ],
       "action": "news_clip",
-      "enabled": true
+      "enabled": true,
+      "lastFiredAt": "2026-06-09"
     }
   ]
 }

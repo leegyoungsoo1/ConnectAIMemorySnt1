@@ -1,12 +1,12 @@
 {
-  "ceo": "@ollama_cloud/gemma4:32b",
+  "ceo": "@ollama_cloud/gemma4:31b",
   "yeongsu": "gemma4:e2b",
   "gwangsu": "gemma4:e2b",
-  "gyeongsu": "@ollama_cloud/gemma4:32b",
-  "yeongcheol": "@ollama_cloud/gemma4:32b",
-  "yeongho": "@ollama_cloud/gemma4:32b",
-  "oksun": "@ollama_cloud/gemma4:32b",
+  "gyeongsu": "@ollama_cloud/gemma4:31b-cloud",
+  "yeongcheol": "@ollama_cloud/gemma4:31b-cloud",
+  "yeongho": "@ollama_cloud/gemma4:31b-cloud",
+  "oksun": "@ollama_cloud/gemma4:31b-cloud",
   "sonja": "gemma4:e2b",
   "youngsuk": "gemma4:e2b",
-  "news_clip": "@ollama_cloud/gemma4:32b"
+  "news_clip": "@ollama_cloud/gemma4:31b-cloud"
 }

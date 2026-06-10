@@ -16,8 +16,35 @@
         "oksun",
         "sonja",
         "youngsuk"
-      ]
+      ],
+      "isBuiltin": true,
+      "specialty": "윈도우/리눅스/유닉스 서버 보안, 웹사이트·웹서비스 취약점 점검, 모의해킹, 보안 체크리스트 작성"
+    },
+    {
+      "id": "team_1781050001993",
+      "name": "AI홍보팀",
+      "emoji": "🔬",
+      "color": "#6366f1",
+      "agentIds": [
+        "leader_team_1781050001993",
+        "news_clip"
+      ],
+      "isBuiltin": false,
+      "customAgents": [
+        {
+          "id": "leader_team_1781050001993",
+          "name": "AI홍보팀 팀장",
+          "role": "Team Orchestrator",
+          "emoji": "🧭",
+          "color": "#F8FAFC",
+          "specialty": "팀장 명령 분석, 작업 분해, 적합한 팀원 선택, 업무 순서 결정, 결과 종합",
+          "tagline": "AI홍보팀 팀원들의 업무를 조율하고 배분합니다",
+          "profileImage": "agent_unknown.svg"
+        }
+      ],
+      "specialty": "뉴스클리핑, 홍보"
     }
   ],
-  "selected": "security"
+  "selected": null,
+  "unassignedAgents": []
 }
