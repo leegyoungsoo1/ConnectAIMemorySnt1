@@ -23,13 +23,18 @@ AUTONOMY_LEVEL: 2
 ## 사용 가능한 도구
 
 ### ⚡ `run_command` — 터미널 명령 실행
-`python run_command.py --cmd "명령어"` 형식으로 사용. 예: `--cmd "npm run build"`, `--cmd "npm test"`
+`<run_command>` 태그 안에 실행할 명령어를 직접 입력. 예:
+`<run_command>node --version</run_command>`
+`<run_command>npm run build</run_command>`
 
 ### 📝 `write_file` — 코드 파일 저장
-`$code=@'...코드...'@; $code | python write_file.py --path "src/파일.jsx"` 형식으로 사용.
+`<run_command>` 안에서 `--content` 인자 사용 (Windows cmd.exe 호환):
+`<run_command>cd "...tools경로..." && python write_file.py --path "src/파일.jsx" --content "내용"</run_command>`
+멀티라인 코드는 Python 인라인으로: `python -c "open('파일','w',encoding='utf-8').write('줄1\n줄2\n')"`
 
 ### 📖 `read_file` — 파일 읽기
-`python read_file.py --path "src/파일.jsx"` 형식으로 사용. 줄번호 포함 출력.
+`<run_command>cd "...tools경로..." && python read_file.py --path "src/파일.jsx"</run_command>`
+경로는 프로젝트 폴더 기준 상대경로 또는 절대경로. 줄번호 포함 출력.
 
 ---
 
