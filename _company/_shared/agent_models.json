@@ -9,5 +9,9 @@
   "sonja": "gemma4:e2b",
   "youngsuk": "gemma4:e2b",
   "news_clip": "@ollama_cloud/gemma4:31b-cloud",
-  "leader_team_1781050001993": "@ollama_cloud/gemma4:31b"
+  "leader_team_1781050001993": "@ollama_cloud/gemma4:31b",
+  "정숙복사": "@ollama_cloud/gemma4:31b-cloud",
+  "custom_gyeongsu_1781141105905": "@ollama_cloud/gemma4:31b-cloud",
+  "custom_gyeongsu_1781141157767": "@ollama_cloud/gemma4:31b-cloud",
+  "custom_yeongcheol_1781141453650": "@ollama_cloud/gemma4:31b-cloud"
 }

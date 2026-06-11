@@ -2,6 +2,31 @@
   "companyName": "AI보안팀",
   "teams": [
     {
+      "id": "team_1781144227297",
+      "name": "AI웹개발팀",
+      "emoji": "🌐",
+      "color": "#6366f1",
+      "agentIds": [
+        "leader_team_1781144227297",
+        "frontend_dev",
+        "backend_dev",
+        "project_manager"
+      ],
+      "customAgents": [
+        {
+          "id": "leader_team_1781144227297",
+          "name": "AI웹개발팀 팀장",
+          "role": "Team Orchestrator",
+          "emoji": "🧭",
+          "color": "#F8FAFC",
+          "specialty": "팀장 명령 분석, 작업 분해, 적합한 팀원 선택, 업무 순서 결정, 결과 종합",
+          "tagline": "AI웹개발팀 팀원들의 업무를 조율하고 배분합니다",
+          "profileImage": "agent_unknown.svg"
+        }
+      ],
+      "specialty": "고객 웹사이트 및 웹 애플리케이션 개발. 요구사항 분석부터 프론트엔드·백엔드 개발·배포까지 담당. 완료 후 AI보안팀에 취약점 점검 의뢰"
+    },
+    {
       "id": "security",
       "name": "AI 보안팀",
       "emoji": "🛡️",
@@ -17,7 +42,6 @@
         "sonja",
         "youngsuk"
       ],
-      "isBuiltin": true,
       "specialty": "윈도우/리눅스/유닉스 서버 보안, 웹사이트·웹서비스 취약점 점검, 모의해킹, 보안 체크리스트 작성"
     },
     {
@@ -27,9 +51,9 @@
       "color": "#6366f1",
       "agentIds": [
         "leader_team_1781050001993",
-        "news_clip"
+        "news_clip",
+        "sales_manager"
       ],
-      "isBuiltin": false,
       "customAgents": [
         {
           "id": "leader_team_1781050001993",

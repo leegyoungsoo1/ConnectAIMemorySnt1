@@ -1,5 +1,5 @@
-# news_fetch.py — v1.0 — 데일리 IT 핫이슈 뉴스 클리핑
-# RSS 피드에서 국내 IT 뉴스를 수집하여 보고서 형식으로 저장
+# news_fetch.py — v1.1 — 데일리 IT 핫이슈 뉴스 클리핑
+# RSS 피드에서 국내외 IT 뉴스를 수집하여 보고서 형식으로 저장
 # API 키 불필요 — Python 표준 라이브러리만 사용
 # 사용: python news_fetch.py [--count 10] [--output report.md]
 import sys, os, json, datetime, argparse, html, re, ssl
@@ -17,9 +17,11 @@ CONFIG_FILE = os.path.join(os.path.dirname(__file__), 'news_fetch.json')
 
 DEFAULT_FEEDS = [
     # 국내 IT
-    {"name": "ZDNet Korea",      "url": "https://www.zdnet.co.kr/rss/news/",             "lang": "ko"},
-    {"name": "Bloter",           "url": "https://www.bloter.net/feed",                    "lang": "ko"},
-    {"name": "전자신문",          "url": "https://www.etnews.com/rss/",                    "lang": "ko"},
+    {"name": "ZDNet Korea",    "url": "https://feeds.feedburner.com/zdkorea",              "lang": "ko"},
+    {"name": "연합뉴스 IT",     "url": "https://www.yna.co.kr/rss/industry.xml",            "lang": "ko"},
+    {"name": "테크42",          "url": "https://www.tech42.co.kr/feed/",                    "lang": "ko"},
+    {"name": "AI타임스",        "url": "https://www.aitimes.com/rss/allArticle.xml",        "lang": "ko"},
+    {"name": "넥스트데일리",     "url": "https://www.nextdaily.co.kr/rss/allArticle.xml",   "lang": "ko"},
     # 해외 IT
     {"name": "TechCrunch",       "url": "https://techcrunch.com/feed/",                   "lang": "en"},
     {"name": "The Verge",        "url": "https://www.theverge.com/rss/index.xml",         "lang": "en"},
@@ -29,9 +31,25 @@ DEFAULT_FEEDS = [
 ]
 
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (compatible; NewsBot/1.0)',
-    'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*',
+    'Accept-Language': 'ko-KR,ko;q=0.9,en;q=0.8',
 }
+
+# 유효한 XML 엔티티 목록 (이외의 HTML 엔티티는 유니코드로 치환)
+_XML_ENTITIES = {'amp', 'lt', 'gt', 'quot', 'apos'}
+
+def _fix_html_entities(raw: bytes) -> bytes:
+    """XML 파서가 처리 못하는 HTML 엔티티(&copy; &nbsp; 등)를 유니코드 문자로 치환."""
+    text = raw.decode('utf-8', errors='replace')
+    def _fix(m):
+        name = m.group(1)
+        if name in _XML_ENTITIES:
+            return m.group(0)  # XML 기본 엔티티는 그대로
+        decoded = html.unescape(f'&{name};')
+        return decoded if decoded != f'&{name};' else f'&amp;{name};'
+    text = re.sub(r'&([a-zA-Z][a-zA-Z0-9]*);', _fix, text)
+    return text.encode('utf-8')
 
 def _strip_html(text: str) -> str:
     text = html.unescape(text or '')
@@ -45,6 +63,11 @@ def _fetch_feed(feed: dict, timeout: int = 10) -> list:
         req = urllib.request.Request(feed['url'], headers=HEADERS)
         with urllib.request.urlopen(req, timeout=timeout, context=_SSL_CTX) as resp:
             raw = resp.read()
+        # RSS가 아닌 HTML 페이지 반환 여부 확인
+        if b'<?xml' not in raw[:200] and b'<rss' not in raw[:200] and b'<feed' not in raw[:200]:
+            print(f"  ⚠️  {feed['name']}: XML이 아닌 응답 (HTML 페이지 반환됨)")
+            return items
+        raw = _fix_html_entities(raw)
         root = ET.fromstring(raw)
         # RSS 2.0
         for item in root.findall('.//item')[:15]:

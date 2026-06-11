@@ -1,0 +1,1 @@
+고객사 웹사이트의 OWASP Top 10 기준 취약점(SQL Injection, XSS, CSRF, 인증 우회, 파일 업로드 취약점 등)을 점검하고, Apache/Nginx 보안 설정과 SSL/TLS 구성을 검토하여 웹개발팀이 납품한 결과물의 보안을 확인하는 것이 목표
