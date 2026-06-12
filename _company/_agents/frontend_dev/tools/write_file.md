@@ -1,3 +1,3 @@
 # write_file
 
-코드 파일 저장. 멀티라인(권장): $code=@'...코드...'@; $code | python write_file.py --path "경로". 단순: --path "경로" --content "내용". 상대경로는 프로젝트 폴더 기준.
+파일 저장 (project_config.json의 projectPath 기준 상대경로). 사용법: --path "경로" --content "내용". @'...'@ 파이프 방식 사용 금지. 파일 생성은 <create_file path="경로">내용</create_file> 태그 권장.
