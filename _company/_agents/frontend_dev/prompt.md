@@ -47,3 +47,18 @@ python "[run_command 도구 절대경로]\run_command.py" --cmd "npm run build"
 - 기존 파일 수정 전 반드시 `read_file`로 내용 확인
 - 파일 경로는 프로젝트 폴더 기준 상대경로 사용
 
+## HTML 파일 작성 시 주의사항
+- HTML 파일은 `file://` 프로토콜(로컬 브라우저 직접 열기)로 실행됩니다
+- `fetch()`, `XMLHttpRequest` 등 외부 파일 요청은 `file://`에서 브라우저 보안 정책으로 **차단**됩니다
+- 외부 JSON·CSV·텍스트 데이터가 필요하면 `fetch()` 대신 **JavaScript 변수로 HTML 안에 직접 내장**하세요
+  ```html
+  <!-- ❌ 금지 -->
+  <script>fetch('data.json').then(...)</script>
+
+  <!-- ✅ 올바른 방법 -->
+  <script>
+  const DATA = [{ "key": "value" }]; // 데이터를 변수로 직접 선언
+  </script>
+  ```
+- 차트 라이브러리(Chart.js 등) CDN 사용은 허용 (인터넷 연결 시)
+
