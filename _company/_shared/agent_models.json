@@ -1,18 +1,19 @@
 {
   "ceo": "@ollama_cloud/gemma4:31b-cloud",
-  "yeongsu": "gemma4:e2b",
-  "gwangsu": "gemma4:e2b",
+  "yeongsu": "@ollama_cloud/gemma4:31b-cloud",
+  "gwangsu": "@ollama_cloud/gemma4:31b-cloud",
   "gyeongsu": "@ollama_cloud/gemma4:31b-cloud",
   "yeongcheol": "@ollama_cloud/gemma4:31b-cloud",
   "yeongho": "@ollama_cloud/gemma4:31b-cloud",
   "oksun": "@ollama_cloud/gemma4:31b-cloud",
-  "sonja": "gemma4:e2b",
-  "youngsuk": "gemma4:e2b",
+  "sonja": "@ollama_cloud/gemma4:31b-cloud",
+  "youngsuk": "@ollama_cloud/gemma4:31b-cloud",
   "news_clip": "@ollama_cloud/gemma4:31b-cloud",
   "leader_team_1781050001993": "@ollama_cloud/gemma4:31b-cloud",
   "frontend_dev": "@ollama_cloud/gemma4:31b-cloud",
   "backend_dev": "@ollama_cloud/gemma4:31b-cloud",
   "project_manager": "@ollama_cloud/gemma4:31b-cloud",
   "sales_manager": "@ollama_cloud/gemma4:31b-cloud",
-  "leader_team_1781144227297": "@ollama_cloud/gemma4:31b-cloud"
+  "leader_team_1781144227297": "@ollama_cloud/gemma4:31b-cloud",
+  "leader_security": "@ollama_cloud/gemma4:31b-cloud"
 }

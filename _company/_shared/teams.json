@@ -2,6 +2,16 @@
   "companyName": "AI보안팀",
   "teams": [
     {
+      "id": "executive",
+      "name": "경영진",
+      "emoji": "🏢",
+      "color": "#F8FAFC",
+      "agentIds": [
+        "ceo"
+      ],
+      "specialty": "전체 팀 조율, 명령 분석, 업무 배분, 결과 종합 보고"
+    },
+    {
       "id": "team_1781144227297",
       "name": "AI웹개발팀",
       "emoji": "🌐",
@@ -32,7 +42,7 @@
       "emoji": "🛡️",
       "color": "#00FF41",
       "agentIds": [
-        "ceo",
+        "leader_security",
         "yeongsu",
         "gwangsu",
         "gyeongsu",
@@ -41,6 +51,18 @@
         "oksun",
         "sonja",
         "youngsuk"
+      ],
+      "customAgents": [
+        {
+          "id": "leader_security",
+          "name": "AI 보안팀장",
+          "role": "Team Orchestrator",
+          "emoji": "🛡️",
+          "color": "#00FF41",
+          "specialty": "보안팀 업무 조율, 취약점 점검 배분, 팀원 작업 순서 결정, 보안 결과 취합·보고",
+          "tagline": "AI 보안팀 팀원들의 업무를 조율하고 배분합니다",
+          "profileImage": "ceo_custom.png"
+        }
       ],
       "specialty": "윈도우/리눅스/유닉스 서버 보안, 웹사이트·웹서비스 취약점 점검, 모의해킹, 보안 체크리스트 작성"
     },
