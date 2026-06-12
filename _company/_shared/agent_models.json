@@ -1,4 +1,5 @@
 {
+  "ceo": "@ollama_cloud/gemma4:31b-cloud",
   "yeongsu": "gemma4:e2b",
   "gwangsu": "gemma4:e2b",
   "gyeongsu": "@ollama_cloud/gemma4:31b-cloud",
@@ -8,6 +9,10 @@
   "sonja": "gemma4:e2b",
   "youngsuk": "gemma4:e2b",
   "news_clip": "@ollama_cloud/gemma4:31b-cloud",
-  "frontend_dev": "qwen2.5-coder:7b",
-  "backend_dev": "qwen2.5-coder:7b"
+  "leader_team_1781050001993": "@ollama_cloud/gemma4:31b-cloud",
+  "frontend_dev": "@ollama_cloud/gemma4:31b-cloud",
+  "backend_dev": "@ollama_cloud/gemma4:31b-cloud",
+  "project_manager": "@ollama_cloud/gemma4:31b-cloud",
+  "sales_manager": "@ollama_cloud/gemma4:31b-cloud",
+  "leader_team_1781144227297": "@ollama_cloud/gemma4:31b-cloud"
 }
