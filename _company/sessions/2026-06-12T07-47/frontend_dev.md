@@ -1,3 +1,10 @@
+# 🤖 지현 — 고객사의 쇼핑몰 웹사이트 개발 프로젝트 계획서를 만들고, 프론트·백엔드 개발 일정을 잡고, 보안 점검 일정도 포함해줘.
+
+🤖 지현: 쇼핑몰 웹사이트 개발 프로젝트 계획서 작성을 시작합니다.
+
+프론트엔드 개발자로서 UI/UX의 완성도는 물론, 보안팀(경수, 영호 님)과 협업하여 설계 단계부터 보안이 내재화된(Security by Design) 일정을 잡는 것이 중요합니다. 단순히 기능 구현만 하는 것이 아니라, 개발 단계별로 보안 점검이 촘촘하게 배치된 상세 계획서를 구성하겠습니다.
+
+<create_file path="shopping_mall_project_plan.md">
 # 🛒 고객사 쇼핑몰 웹사이트 개발 프로젝트 계획서
 
 ## 1. 프로젝트 개요
@@ -17,23 +24,17 @@
 - **Database:** PostgreSQL (상품/주문), Redis (캐싱/세션)
 - **Infrastructure:** AWS (EC2, S3, RDS)
 
-### Security (Enhanced)
+### Security
 - **Authentication:** JWT (JSON Web Token) & OAuth 2.0
-- **Token Storage Strategy (XSS Prevention):**
-  - **Access Token:** Client-side Memory (JS Variable)에 저장하여 페이지 새로고침 시 소멸.
-  - **Refresh Token:** `HttpOnly`, `Secure`, `SameSite=Strict` 설정이 적용된 쿠키에 저장하여 JS 접근을 원천 차단.
-- **Token Expiration & Rotation:**
-  - **Access Token:** 짧은 유효기간 (15~30분) 설정.
-  - **Refresh Token:** 상대적으로 긴 유효기간 설정 및 사용 시마다 새로운 Refresh Token을 발급하는 **Rotation 전략** 적용 (탈취 시 즉시 무효화 가능).
-- **Validation:** 서버 사이드 이중 검증 및 입력값 필터링 체계.
-- **Testing:** OWASP Top 10 기반 취약점 점검 및 정기적 모의 해킹.
+- **Validation:** 서버 사이드 이중 검증 체계
+- **Testing:** OWASP Top 10 기반 취약점 점검
 
 ## 3. 상세 개발 일정 (8주 공정)
 
 | 주차 | 단계 | 프론트엔드 (지현) | 백엔드 (개발팀) | 보안 점검 (경수/영호) | 비고 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1주** | **분석 및 설계** | UI/UX 와이어프레임, 디자인 시스템 정의 | DB 스키마 설계, API 명세서 작성 | 보안 요구사항 정의 및 위협 모델링 | |
-| **2주** | **기초 구현** | 프로젝트 환경 설정, 공통 컴포넌트 개발, **Axios interceptor 기반 토큰 갱신 로직 구현** | 인증/인가(Auth) 서버 구현, **HttpOnly 쿠키 기반 Refresh Token 발급 API** | 인증 로직 취약점 분석 (Auth Bypass 및 **Cookie 속성 검증**) | |
+| **2주** | **기초 구현** | 프로젝트 환경 설정, 공통 컴포넌트 개발 | 인증/인가(Auth) 서버 구현, API 기본 구조 | 인증 로직 취약점 분석 (Auth Bypass 점검) | |
 | **3주** | **핵심 기능 A** | 메인 페이지, 상품 리스트, 필터링 UI | 상품 관리 API, 카테고리 검색 기능 | Input Validation 및 SQL Injection 점검 | |
 | **4주** | **핵심 기능 B** | 상품 상세 페이지, 장바구니, 찜 기능 | 장바구니 로직, 주문/결제 API 기초 | 권한 관리(IDOR) 취약점 점검 | |
 | **5주** | **핵심 기능 C** | 주문/결제 프로세스 UI, 마이페이지 | 결제 게이트웨이 연동, 주문 처리 시스템 | 결제 로직 무결성 및 파라미터 변조 점검 | |
@@ -57,3 +58,14 @@
 - **사용자:** 기기 상관없이 쾌적한 쇼핑 경험 제공
 - **운영자:** 보안 사고 걱정 없는 안정적인 서비스 운영
 - **기업:** 보안성과 완성도를 모두 갖춘 포트폴리오 확보 및 고객 신뢰도 상승
+</create_file>
+
+계획서 작성을 완료했습니다. 프론트엔드 개발자로서 디자인의 디테일과 반응형 구현을 챙기면서도, 보안팀이 각 단계에서 개입할 수 있도록 일정을 설계하여 '뚫리지 않는 쇼핑몰'을 만드는 데 집중하겠습니다.
+
+📊 평가: 완료 — 고객사 쇼핑몰 개발 계획서 및 프론트/백/보안 통합 일정 수립 완료.
+📝 다음 단계: CEO 승인 후 1주차 'UI/UX 와이어프레임 및 디자인 시스템' 정의 작업 착수.
+
+---
+## 📁 파일 액션 결과
+
+✅ 생성: d:\1.개발관련\Claude Code Test\connect-ai-main\지식폴더\_company\sessions\2026-06-12T07-47\shopping_mall_project_plan.md
